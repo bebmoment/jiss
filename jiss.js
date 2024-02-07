@@ -1,13 +1,13 @@
 // before running, make sure to type npm install prompt-sync
-console.log("Welcome ");
+alert("Welcome ");
 
 const prompt = require('prompt-sync')(); // allow user input
 
 // 1
 const name = prompt('What is your name? ');
-console.log(`Hey there ${name}`);
+alert(`Hey there ${name}`);
 const book = prompt('What is your favourite book? ');
-console.log(`${book} is one of the books of all time`);
+alert(`${book} is one of the books of all time`);
 
 // 2
 do {
@@ -15,20 +15,20 @@ do {
 } while (isNaN(yourNumber));
 // bonus one liner nesting the ternary operator
 const positiveOrNegative = (val) => (val == 0) ? "zero" : (val > 0) ? "positive" : "negative";
-console.log(positiveOrNegative(yourNumber));
-console.log(negativeOrPositive(yourNumber));
+alert(positiveOrNegative(yourNumber));
+// console.log(negativeOrPositive(yourNumber));
 
 // using if else
-function negativeOrPositive(val) {
-    if (val == 0) {
-        return "zero";
-    }
-    if (val > 0) {
-        return "positive";
-    } else {
-        return "negative";
-    }
-} 
+// function negativeOrPositive(val) {
+//     if (val == 0) {
+//         return "zero";
+//     }
+//     if (val > 0) {
+//         return "positive";
+//     } else {
+//         return "negative";
+//     }
+// } 
 
 // 3
 let divideByThree = 0;
@@ -36,7 +36,7 @@ do {
     divideByThree = prompt("Enter a number greater than 0: ");
 } while(divideByThree <= 0 || isNaN(divideByThree));
 const divisibleByThree = (val) => (val % 3 === 0) ? "Your number is divisible by 3" : "Your number is not divisible by 3";
-console.log(divisibleByThree(divideByThree));
+alert(divisibleByThree(divideByThree));
 
 // 4
 let date = prompt("Enter a date: ");
@@ -71,7 +71,7 @@ switch (monthDate[0].toLowerCase()) {
         days = 0;
 }
 days += parseInt(monthDate[1]);
-console.log(days);
+alert(days);
 
 // 5
 let j = 0;
