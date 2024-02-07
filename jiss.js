@@ -1,7 +1,7 @@
 // before running, make sure to type npm install prompt-sync
 console.log("Welcome ");
 
-// const prompt = require('prompt-sync')(); // allow user input
+const prompt = require('prompt-sync')(); // allow user input
 
 // 1
 const name = prompt('What is your name? ');
