@@ -102,13 +102,40 @@ const FizzBuzz = (num) => {
     if (num % 3 === 0) {
         output += "Fizz";
     }
+    if (num % 4 === 0) {
+        output += "Bazz";
+    }
     if (num % 5 === 0) {
         output += "Buzz";
     }
+    if (num % 7 === 0) {
+        output += "Guzz";
+    }
+    
     if (output==='') {
         output = num;
     }
     return output;
 
 }
-console.log(FizzBuzz(15), FizzBuzz(30), FizzBuzz(5), FizzBuzz(2));
+let nombers = new Array(100);
+for (let l = 0; l < nombers.length; l++) {
+    nombers[l]=l;
+}
+
+const ruleset = {
+    3: "fizz",
+    5: "buzz",
+    7: 'guzz',
+};
+
+let FizzBuzzGuzz = (n) => {
+    let phrase = "";
+    for (const [num, rule] of Object.entries(ruleset)) {
+        if (n % num === 0) phrase += rule;
+    }
+    return (phrase === '') ? n : phrase
+}
+
+console.log(FizzBuzzGuzz(105));
+
