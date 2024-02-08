@@ -102,21 +102,15 @@ const FizzBuzz = (num) => {
     if (num % 3 === 0) {
         output += "Fizz";
     }
-    if (num % 4 === 0) {
-        output += "Bazz";
-    }
+
     if (num % 5 === 0) {
         output += "Buzz";
     }
-    if (num % 7 === 0) {
-        output += "Guzz";
-    }
-    
+
     if (output==='') {
         output = num;
     }
     return output;
-
 }
 let nombers = new Array(100);
 for (let l = 0; l < nombers.length; l++) {
